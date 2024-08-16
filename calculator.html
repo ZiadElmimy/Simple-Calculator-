@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles/calculator.css">
+    </head>
+
+    <body>
+        <div class="structure-div">
+            <div>
+                <p class="calculation">0</p>
+            </div>
+
+            <div class="buttons-div">
+                <div class="numbers-clear-div">
+                    <div class="row-0">
+                        <button class="AC-button" onclick="
+                        deleteOperation();
+                        ">AC</button>
+                    </div>
+
+                    <div class="row-1">
+                        <button onclick="
+                        addOperand('7');
+                        ">7</button>
+                        <button onclick="
+                        addOperand('8');
+                        ">8</button>
+                        <button onclick="
+                        addOperand('9');
+                        ">9</button>
+                    </div>
+
+                    <div class="row-2">
+                        <button onclick="
+                        addOperand('4');
+                        ">4</button>
+                        <button onclick="
+                        addOperand('5');
+                        ">5</button>
+                        <button onclick="
+                        addOperand('6');
+                        ">6</button>
+                    </div>
+                    
+                    <div class="row-3">
+                        <button onclick="
+                        addOperand('1');
+                        ">1</button>
+                        <button onclick="
+                        addOperand('2');
+                        ">2</button>
+                        <button onclick="
+                        addOperand('3');
+                        ">3</button>
+                    </div>
+
+                    <div class="row-4">
+                        <button class="zero-button" onclick="
+                        addOperand('0');
+                        ">0</button>
+                        <button onclick="
+                        addOperand('.');
+                        ">.</button>
+                        <button class="equal-button" onclick="
+                        calculate();
+                        ">=</button>
+                    </div>
+                </div>
+
+                <div class="operators-delete-div">
+                    <button class="operators" onclick="
+                    deleteCalculation();
+                    ">DE</button>
+                    <button class="operators" onclick="
+                    addOperator('+'); calculate();
+                    ">+</button>
+                    <button class="operators" onclick="
+                    addOperator('-'); calculate();
+                    ">-</button>
+                    <button class="operators" onclick="
+                    addOperator('*'); calculate();
+                    ">*</button>
+                    <button class="operators" onclick="
+                    addOperator('/'); calculate();
+                    ">/</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="scripts/calculator.js">
+        </script>
+    </body>
+</html>
